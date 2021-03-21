@@ -1,0 +1,47 @@
+# Neural Network
+
+## Project Overview
+
+The purpose of this project is utilize machine learning and neural networks to classify if applicants would be successful given funding by Alphabet Soup. The dataset includes information on over 34,000 organization that have previously recevied funding from Alphabet Soup. Within this dataset, there are 12 variables, which will be further classified as features or targets or will be removed before fitting the model.    
+
+## Results
+
+**Data Preprocessing**
+
+- What variable(s) are considered the target(s) for your model?
+The target for the model is the variable "IS_SUCCESSFUL," which signifies whether a charity used their funding successfully. 
+
+- What variable(s) are considered to be the features for your model?
+The features for the model are: "APPLICATION_TYPE", "AFFILIATION", "CLASSIFICATION", "USE_CASE", "ORGANIZATION", "STATUS", "INCOME_AMT", "SPECIAL_CONSIDERATIONS", "ASK_AMT".
+
+- What variable(s) are neither targets nor features, and should be removed from the input data?
+"EIN" and "NAME" were not considered features or targets, and were removed from the input data. 
+
+
+**Compiling, Training, and Evaluating the Model**
+
+- How many neurons, layers, and activation functions did you select for your neural network model, and why?
+Initially, 
+
+- Were you able to achieve the target model performance?
+I was not able to achive the target model performance.
+
+- What steps did you take to try and increase model performance?
+For Attempt 1, I removed STATUS, SPECIAL CONSIDERATIONS and CLASSIFICATION from the features. Status and special considerations only have two unique values and therefore, it seems like those data offer little to the model. Additionally, classification has many unique values, which I thought may have been a source of confusion in the model. The accuracy of this attempt is lower than the initial model. 
+
+![attempt1](/images/attempt1.png)
+
+For Attempt 2, no features were removed, instead the number of neurons were increased and an additional hidden layer was added. Again, the accuracy of this attempt was slightly lower than the initial model.  
+
+![attempt2](/images/attempt2.png)
+
+For Attempt 3, the activvation functions for the hidden layers was changed to tanh. However, this did not increase the accuracy either. 
+
+![attempt3](/images/attempt3.png)
+
+
+## Summary
+
+Changing income amount into max amount for each organization 
+removing outliers
+more data points on how organizations are considered "successful" with funding 
