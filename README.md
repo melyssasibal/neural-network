@@ -21,7 +21,7 @@ The features for the model are: "APPLICATION_TYPE", "AFFILIATION", "CLASSIFICATI
 **Compiling, Training, and Evaluating the Model**
 
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
-Initially, 
+Initially, 80 neurons were selected. As provided in the module, a good starting point is 2-3 times the number of inputs for the hidden layer. The activation functions were chosen based on previous work in the module, as well. 
 
 - Were you able to achieve the target model performance?
 I was not able to achive the target model performance.
@@ -42,6 +42,10 @@ For Attempt 3, the activvation functions for the hidden layers was changed to ta
 
 ## Summary
 
-Changing income amount into max amount for each organization 
-removing outliers
-more data points on how organizations are considered "successful" with funding 
+While there are a number of combinations of changes that could be incorporated into the model, the three attempts mentioned did not add to the model's accuracy. Recommendations to get more accurace predictions would be the following: 
+
+- Add more data points: Alphabet Soup should incorporate criteria used to measure if an organization has been successful with their funding into this dataset. While neural networks are able to find patterns given any dataset, it may be possible this data is limited in providing a clearer picture. 
+
+- Change income amount: Currently this variable is provided in income ranges for values. Maybe including the income from the previous fiscal year as a value, rather than range would be more beneficial. 
+
+- Remove outliers: From a brief look at the dataset, there is a large range of ask amounts. While the data has been standardize for all attempts, it may be worthwhile to see if there are any extreme data points skewing the model. 
